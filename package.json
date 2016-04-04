@@ -1,0 +1,41 @@
+{
+  "name": "grunt-vinyl",
+  "description": "Pipe files thru vinyl-fs",
+  "version": "0.1.0",
+  "homepage": "https://github.com/dherges/grunt-vinyl",
+  "author": {
+    "name": "David Herges",
+    "email": "david@spektrakel.de"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dherges/grunt-vinyl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dherges/grunt-vinyl/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/dherges/grunt-vinyl/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "dependencies": {
+    "vinyl-fs": "^2.4.3"
+  }
+}
