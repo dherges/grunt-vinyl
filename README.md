@@ -37,17 +37,12 @@ grunt.initConfig({
 
 ### Options
 
-#### options.separator
-Type: `String`
-Default value: `',  '`
+#### options.task
+Type: `Function`
+Default value: `undefined`
 
-A string value that is used to do something with whatever.
+A function that takes a vinyl-fs stream as input and returns returns that stream.
 
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
 
 ### Usage Examples
 
