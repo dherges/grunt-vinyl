@@ -39,8 +39,9 @@ module.exports = function(grunt) {
       },
       custom_options: {
         options: {
-          separator: ': ',
-          punctuation: ' !!!'
+          task: function (stream) {
+            grunt.log.warn('a task run...')
+          }
         },
         files: {
           'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']

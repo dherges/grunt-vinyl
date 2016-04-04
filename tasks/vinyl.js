@@ -30,21 +30,19 @@ module.exports = function(grunt) {
          if (count > 0) {
            done(true)
          } else {
-           done -= 1
+           count -= 1
          }
        }
 
     this.files.forEach(function(file) {
-      grunt.log.info(file.src)
+      grunt.log.debug(file.src)
 
-      var dest = file.dest
-        , dirname = path.dirname(dest)
-        , basename = path.basename(dest)
+      var dest = grunt.file.isFile(file.dest) ? path.dirname(file.dest) : file.dest
         , stream = vfs.src(file.src)
 
-      task && (stream = task(stream))
+      task && task(stream)
 
-      stream.pipe(vfs.dest(dirname))
+      stream.pipe(vfs.dest(dest))
             .on('error', fail)
             .on('finish', success)
     })

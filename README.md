@@ -41,7 +41,7 @@ grunt.initConfig({
 Type: `Function`
 Default value: `undefined`
 
-A function that takes a vinyl-fs stream as input and returns returns that stream.
+A function that takes a [stream](http://nodejs.org/api/stream.html) of [Vinyl files](https://github.com/wearefractal/vinyl-fs) that can be [piped](http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options).
 
 
 ### Usage Examples
