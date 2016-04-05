@@ -13,7 +13,7 @@ module.exports = function(grunt) {
   var path = require('path')
     , vfs = require('vinyl-fs')
     , defaultOpts = {
-        task: undefined
+        task: function (stream) { return stream }
       }
 
   grunt.registerMultiTask('vinyl', 'Pipe files thru vinyl-fs', function() {
