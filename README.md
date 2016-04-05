@@ -39,9 +39,9 @@ grunt.initConfig({
 
 #### options.task
 Type: `Function`
-Default value: `undefined`
+Default value: `function (stream) { return stream }`
 
-A function that takes a [stream](http://nodejs.org/api/stream.html) of [Vinyl files](https://github.com/wearefractal/vinyl-fs) that can be [piped](http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options).
+A function that takes a [stream](http://nodejs.org/api/stream.html) of [Vinyl files](https://github.com/wearefractal/vinyl-fs) that can be [piped](http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options). The function must return that stream for output.
 
 
 ### Usage Examples
