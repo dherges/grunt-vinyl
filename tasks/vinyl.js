@@ -40,7 +40,7 @@ module.exports = function(grunt) {
       var dest = grunt.file.isFile(file.dest) ? path.dirname(file.dest) : file.dest
         , stream = vfs.src(file.src)
 
-      task && task(stream)
+      task && (stream = task(stream))
 
       stream.pipe(vfs.dest(dest))
             .on('error', fail)
